@@ -17,12 +17,12 @@ from database.database import *
 # Commands for adding admins by owner
 @Bot.on_message(filters.command('add_admin') & filters.private & filters.user(OWNER_ID))
 async def add_admins(client: Client, message: Message):
-    pro = await message.reply("<b><i>ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ..</i></b>", quote=True)
+    pro = await message.reply("<b><i>𝖯𝗅𝖾𝖺𝗌𝖾 𝗐𝖺𝗂𝗍..</i></b>", quote=True)
     check = 0
     admin_ids = await db.get_all_admins()
     admins = message.text.split()[1:]
 
-    reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="close")]])
+    reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("𝖢𝗅𝗈𝗌𝖾", callback_data="close")]])
 
     if not admins:
         return await pro.edit(
@@ -67,11 +67,11 @@ async def add_admins(client: Client, message: Message):
 
 @Bot.on_message(filters.command('deladmin') & filters.private & filters.user(OWNER_ID))
 async def delete_admins(client: Client, message: Message):
-    pro = await message.reply("<b><i>ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ..</i></b>", quote=True)
+    pro = await message.reply("<b><i>𝖯𝗅𝖾𝖺𝗌𝖾 𝗐𝖺𝗂𝗍..</i></b>", quote=True)
     admin_ids = await db.get_all_admins()
     admins = message.text.split()[1:]
 
-    reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="close")]])
+    reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("𝖢𝗅𝗈𝗌𝖾", callback_data="close")]])
 
     if not admins:
         return await pro.edit(
