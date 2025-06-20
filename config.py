@@ -24,15 +24,15 @@ API_HASH = os.environ.get("API_HASH", "") #Your API Hash from my.telegram.org
 #--------------------------------------------
 
 CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "")) #Your db channel Id
-OWNER = os.environ.get("OWNER", "GamerBhai02") # Owner username without @
-OWNER_ID = int(os.environ.get("OWNER_ID", "1101724431")) # Owner id
+OWNER = os.environ.get("OWNER", "") # Owner username without @
+OWNER_ID = int(os.environ.get("OWNER_ID", "")) # Owner id
 #--------------------------------------------
 PORT = os.environ.get("PORT", "8080")
 #--------------------------------------------
 DB_URI = os.environ.get("DATABASE_URL", "")
 DB_NAME = os.environ.get("DATABASE_NAME", "Cluster0")
 #--------------------------------------------
-FSUB_LINK_EXPIRY = int(os.getenv("FSUB_LINK_EXPIRY", "10"))  # 0 means no expiry
+FSUB_LINK_EXPIRY = int(os.getenv("FSUB_LINK_EXPIRY", "60"))  # 0 means no expiry
 BAN_SUPPORT = os.environ.get("BAN_SUPPORT", "https://t.me/GamerBhai02")
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "200"))
 #--------------------------------------------
@@ -45,7 +45,7 @@ HELP_TXT = "<b>𝖳𝗁𝗂𝗌 𝗂𝗌 𝖺 𝖥𝗂𝗅𝖾 𝖲𝗍𝗈𝗋�
 ABOUT_TXT = "<b>✯ Creator : <a href='https://t.me/GamerBhai02'>Abu Talha Ansari</a>\n✯ Language : <code>Python3</code>\n✯ Library : <a href='https://docs.pyrogram.org/'>Pyrogram</a></b>" #\n✯ Source Code : <a href='https://github.com/GamerBhai02/FileStoreBot'>Click Here</a>
 #--------------------------------------------
 START_MSG = os.environ.get("START_MESSAGE", "<b>𝖧𝖾𝗅𝗅𝗈 {first}\n\n<blockquote>𝖨 𝖺𝗆 𝖺 𝖥𝗂𝗅𝖾 𝖲𝗍𝗈𝗋𝖾 𝖡𝗈𝗍, 𝖨 𝖼𝖺𝗇 𝗌𝗍𝗈𝗋𝖾 𝗉𝗋𝗂𝗏𝖺𝗍𝖾 𝖿𝗂𝗅𝖾𝗌 𝗂𝗇 𝗌𝗉𝖾𝖼𝗂𝖿𝗂𝖾𝖽 𝖼𝗁𝖺𝗇𝗇𝖾𝗅 𝖺𝗇𝖽 𝗈𝗍𝗁𝖾𝗋 𝗎𝗌𝖾𝗋𝗌 𝖼𝖺𝗇 𝖺𝖼𝖼𝖾𝗌𝗌 𝗂𝗍 𝖿𝗋𝗈𝗆 𝗌𝗉𝖾𝖼𝗂𝖺𝗅 𝗅𝗂𝗇𝗄.</blockquote></b>")
-FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "𝖧𝖾𝗅𝗅𝗈 {first}\n\n<b>𝖩𝗈𝗂𝗇 𝖮𝗎𝗋 𝖢𝗁𝖺𝗇𝗇𝖾𝗅 / 𝖦𝗋𝗈𝗎𝗉 𝖠𝗇𝖽 𝖳𝗁𝖾𝗇 𝖢𝗅𝗂𝖼𝗄 𝖮𝗇 𝖱𝖾𝗅𝗈𝖺𝖽 𝖡𝗎𝗍𝗍𝗈𝗇 𝖳𝗈 𝖦𝖾𝗍 𝖸𝗈𝗎𝗋 𝖱𝖾𝗊𝗎𝖾𝗌𝗍𝖾𝖽 𝖥𝗂𝗅𝖾.</b>")
+FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "𝖧𝖾𝗅𝗅𝗈 {first}\n\n<b>𝖩𝗈𝗂𝗇 𝖮𝗎𝗋 𝖢𝗁𝖺𝗇𝗇𝖾𝗅 / 𝖦𝗋𝗈𝗎𝗉 (𝖫𝗂𝗇𝗄𝗌 𝖶𝗂𝗅𝗅 𝖤𝗑𝗉𝗂𝗋𝖾 𝗂𝗇 1 𝗆𝗂𝗇𝗎𝗍𝖾) 𝖠𝗇𝖽 𝖳𝗁𝖾𝗇 𝖢𝗅𝗂𝖼𝗄 𝖮𝗇 𝖱𝖾𝗅𝗈𝖺𝖽 𝖡𝗎𝗍𝗍𝗈𝗇 𝖳𝗈 𝖦𝖾𝗍 𝖸𝗈𝗎𝗋 𝖱𝖾𝗊𝗎𝖾𝗌𝗍𝖾𝖽 𝖥𝗂𝗅𝖾.</b>")
 
 CMD_TXT = """<blockquote><b>» 𝖠𝖽𝗆𝗂𝗇 𝖢𝗈𝗆𝗆𝖺𝗇𝖽𝗌:</b></blockquote>
 
