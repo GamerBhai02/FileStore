@@ -22,8 +22,8 @@ async def cb_handler(client: Bot, query: CallbackQuery):
             text=HELP_TXT.format(first=query.from_user.first_name),
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton('ʜᴏᴍᴇ', callback_data='start'),
-                 InlineKeyboardButton("ᴄʟᴏꜱᴇ", callback_data='close')]
+                [InlineKeyboardButton('𝖧𝗈𝗆𝖾', callback_data='start'),
+                 InlineKeyboardButton("𝖢𝗅𝗈𝗌𝖾", callback_data='close')]
             ])
         )
 
@@ -32,8 +32,8 @@ async def cb_handler(client: Bot, query: CallbackQuery):
             text=ABOUT_TXT.format(first=query.from_user.first_name),
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton('ʜᴏᴍᴇ', callback_data='start'),
-                 InlineKeyboardButton('ᴄʟᴏꜱᴇ', callback_data='close')]
+                [InlineKeyboardButton('𝖧𝗈𝗆𝖾', callback_data='start'),
+                 InlineKeyboardButton('𝖢𝗅𝗈𝗌𝖾', callback_data='close')]
             ])
         )
 
@@ -42,8 +42,8 @@ async def cb_handler(client: Bot, query: CallbackQuery):
             text=START_MSG.format(first=query.from_user.first_name),
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton("ʜᴇʟᴘ", callback_data='help'),
-                 InlineKeyboardButton("ᴀʙᴏᴜᴛ", callback_data='about')]
+                [InlineKeyboardButton("𝖧𝖾𝗅𝗉", callback_data='help'),
+                 InlineKeyboardButton("𝖠𝖻𝗈𝗎𝗍", callback_data='about')]
             ])
         )
 
@@ -59,7 +59,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
         try:
             chat = await client.get_chat(cid)
             mode = await db.get_channel_mode(cid)
-            status = "🟢 ᴏɴ" if mode == "on" else "🔴 ᴏғғ"
+            status = "🟢 𝖮𝖭" if mode == "on" else "🔴 𝖮𝖥𝖥"
             new_mode = "ᴏғғ" if mode == "on" else "on"
             buttons = [
                 [InlineKeyboardButton(f"ʀᴇǫ ᴍᴏᴅᴇ {'OFF' if mode == 'on' else 'ON'}", callback_data=f"rfs_toggle_{cid}_{new_mode}")],
