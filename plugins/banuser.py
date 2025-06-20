@@ -35,7 +35,7 @@ async def add_banuser(client: Client, message: Message):
     banuser_ids = await db.get_ban_users()
     banusers = message.text.split()[1:]
 
-    reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("❌ Cʟᴏsᴇ", callback_data="close")]])
+    reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("❌ 𝖢𝗅𝗈𝗌𝖾", callback_data="close")]])
 
     if not banusers:
         return await pro.edit(
@@ -79,7 +79,7 @@ async def delete_banuser(client: Client, message: Message):
     banuser_ids = await db.get_ban_users()
     banusers = message.text.split()[1:]
 
-    reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("❌ Cʟᴏsᴇ", callback_data="close")]])
+    reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("❌ 𝖢𝗅𝗈𝗌𝖾", callback_data="close")]])
 
     if not banusers:
         return await pro.edit(
