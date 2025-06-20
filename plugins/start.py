@@ -85,12 +85,12 @@ async def start_command(client: Client, message: Message):
                 print(f"Error decoding ID: {e}")
                 return
 
-        temp_msg = await message.reply("<b>Please wait...</b>")
+        temp_msg = await message.reply("<b>𝖲𝖾𝗇𝖽𝗂𝗇𝗀 𝖯𝗅𝖾𝖺𝗌𝖾 𝖶𝖺𝗂𝗍......</b>")
         try:
             messages = await get_messages(client, ids)
         except Exception as e:
-            await message.reply_text("Something went wrong!")
-            print(f"Error getting messages: {e}")
+            await message.reply_text("𝖲𝗈𝗆𝖾𝗍𝗁𝗂𝗇𝗀 𝗐𝖾𝗇𝗍 𝗐𝗋𝗈𝗇𝗀!")
+            print(f"𝖤𝗋𝗋𝗈𝗋 𝗀𝖾𝗍𝗍𝗂𝗇𝗀 𝗆𝖾𝗌𝗌𝖺𝗀𝖾𝗌: {e}")
             return
         finally:
             await temp_msg.delete()
@@ -127,7 +127,7 @@ async def start_command(client: Client, message: Message):
 
         if FILE_AUTO_DELETE > 0:
             notification_msg = await message.reply(
-                f"<b>Tʜɪs Fɪʟᴇ ᴡɪʟʟ ʙᴇ Dᴇʟᴇᴛᴇᴅ ɪɴ  {get_exp_time(FILE_AUTO_DELETE)}. Pʟᴇᴀsᴇ sᴀᴠᴇ ᴏʀ ғᴏʀᴡᴀʀᴅ ɪᴛ ᴛᴏ ʏᴏᴜʀ sᴀᴠᴇᴅ ᴍᴇssᴀɢᴇs ʙᴇғᴏʀᴇ ɪᴛ ɢᴇᴛs Dᴇʟᴇᴛᴇᴅ.</b>"
+                f"<b>𝖳𝗁𝗂𝗌 𝖥𝗂𝗅𝖾 𝗐𝗂𝗅𝗅 𝖻𝖾 𝖣𝖾𝗅𝖾𝗍𝖾𝖽 𝗂𝗇  {get_exp_time(FILE_AUTO_DELETE)}. 𝖯𝗅𝖾𝖺𝗌𝖾 𝗌𝖺𝗏𝖾 𝗈𝗋 𝖿𝗈𝗋𝗐𝖺𝗋𝖽 𝗂𝗍 𝗍𝗈 𝗒𝗈𝗎𝗋 𝗌𝖺𝗏𝖾𝖽 𝗆𝖾𝗌𝗌𝖺𝗀𝖾𝗌 𝖻𝖾𝖿𝗈𝗋𝖾 𝗂𝗍 𝗀𝖾𝗍𝗌 𝖣𝖾𝗅𝖾𝗍𝖾𝖽.</b>"
             )
 
             await asyncio.sleep(FILE_AUTO_DELETE)
@@ -146,24 +146,22 @@ async def start_command(client: Client, message: Message):
                     else None
                 )
                 keyboard = InlineKeyboardMarkup(
-                    [[InlineKeyboardButton("ɢᴇᴛ ғɪʟᴇ ᴀɢᴀɪɴ!", url=reload_url)]]
+                    [[InlineKeyboardButton("𝖦𝖾𝗍 𝖥𝗂𝗅𝖾 𝖠𝗀𝖺𝗂𝗇!", url=reload_url)]]
                 ) if reload_url else None
 
                 await notification_msg.edit(
-                    "<b>ʏᴏᴜʀ ᴠɪᴅᴇᴏ / ꜰɪʟᴇ ɪꜱ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ᴅᴇʟᴇᴛᴇᴅ !!\n\nᴄʟɪᴄᴋ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ ᴅᴇʟᴇᴛᴇᴅ ᴠɪᴅᴇᴏ / ꜰɪʟᴇ 👇</b>",
+                    "<b>𝖸𝗈𝗎𝗋 𝖵𝗂𝖽𝖾𝗈 / 𝖥𝗂𝗅𝖾 𝗂𝗌 𝖲𝗎𝖼𝖼𝖾𝗌𝗌𝖿𝗎𝗅𝗅𝗒 𝖣𝖾𝗅𝖾𝗍𝖾𝖽 !!\n\n𝖢𝗅𝗂𝖼𝗄 𝖡𝖾𝗅𝗈𝗐 𝖡𝗎𝗍𝗍𝗈𝗇 𝖳𝗈 𝖦𝖾𝗍 𝖸𝗈𝗎𝗋 𝖣𝖾𝗅𝖾𝗍𝖾𝖽 𝖵𝗂𝖽𝖾𝗈 / 𝖥𝗂𝗅𝖾 👇</b>",
                     reply_markup=keyboard
                 )
             except Exception as e:
-                print(f"Error updating notification with 'Get File Again' button: {e}")
+                print(f"Error updating notification with '𝖦𝖾𝗍 𝖥𝗂𝗅𝖾 𝖠𝗀𝖺𝗂𝗇' button: {e}")
     else:
         reply_markup = InlineKeyboardMarkup(
             [
-                    [InlineKeyboardButton("• ᴍᴏʀᴇ ᴄʜᴀɴɴᴇʟs •", url="https://t.me/Nova_Flix/50")],
 
     [
-                    InlineKeyboardButton("• ᴀʙᴏᴜᴛ", callback_data = "about"),
-                    InlineKeyboardButton('ʜᴇʟᴘ •', callback_data = "help")
-
+                    InlineKeyboardButton("• 𝖠𝖻𝗈𝗎𝗍", callback_data = "about"),
+                    InlineKeyboardButton('𝖧𝖾𝗅𝗉 •', callback_data = "help")
     ]
             ]
         )
@@ -193,7 +191,7 @@ async def start_command(client: Client, message: Message):
 chat_data_cache = {}
 
 async def not_joined(client: Client, message: Message):
-    temp = await message.reply("<b><i>ᴡᴀɪᴛ ᴀ sᴇᴄ..</i></b>")
+    temp = await message.reply("<b><i>𝖶𝖺𝗂𝗍 𝖺 𝗌𝖾𝖼..</i></b>")
 
     user_id = message.from_user.id
     buttons = []
@@ -242,15 +240,15 @@ async def not_joined(client: Client, message: Message):
                 except Exception as e:
                     print(f"Error with chat {chat_id}: {e}")
                     return await temp.edit(
-                        f"<b><i>! Eʀʀᴏʀ, Cᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴛᴏ sᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇs @rohit_1888</i></b>\n"
-                        f"<blockquote expandable><b>Rᴇᴀsᴏɴ:</b> {e}</blockquote>"
+                        f"<b><i>! 𝖤𝗋𝗋𝗈𝗋, 𝖢𝗈𝗇𝗍𝖺𝖼𝗍 𝖽𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋 𝗍𝗈 𝗌𝗈𝗅𝗏𝖾 𝗍𝗁𝖾 𝗂𝗌𝗌𝗎𝖾𝗌 @GamerBhai02</i></b>\n"
+                        f"<blockquote expandable><b>𝖱𝖾𝖺𝗌𝗈𝗇:</b> {e}</blockquote>"
                     )
 
         # Retry Button
         try:
             buttons.append([
                 InlineKeyboardButton(
-                    text='♻️ Tʀʏ Aɢᴀɪɴ',
+                    text='♻️ 𝖳𝗋𝗒 𝖠𝗀𝖺𝗂𝗇',
                     url=f"https://t.me/{client.username}?start={message.command[1]}"
                 )
             ])
@@ -272,13 +270,13 @@ async def not_joined(client: Client, message: Message):
     except Exception as e:
         print(f"Final Error: {e}")
         await temp.edit(
-            f"<b><i>! Eʀʀᴏʀ, Cᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴛᴏ sᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇs @rohit_1888</i></b>\n"
-            f"<blockquote expandable><b>Rᴇᴀsᴏɴ:</b> {e}</blockquote>"
+            f"<b><i>! 𝖤𝗋𝗋𝗈𝗋, 𝖢𝗈𝗇𝗍𝖺𝖼𝗍 𝖽𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋 𝗍𝗈 𝗌𝗈𝗅𝗏𝖾 𝗍𝗁𝖾 𝗂𝗌𝗌𝗎𝖾𝗌 @GamerBhai02</i></b>\n"
+            f"<blockquote expandable><b>𝖱𝖾𝖺𝗌𝗈𝗇:</b> {e}</blockquote>"
         )
 
 #=====================================================================================##
 
 @Bot.on_message(filters.command('commands') & filters.private & admin)
 async def bcmd(bot: Bot, message: Message):        
-    reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("• ᴄʟᴏsᴇ •", callback_data = "close")]])
+    reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("• 𝖢𝗅𝗈𝗌𝖾 •", callback_data = "close")]])
     await message.reply(text=CMD_TXT, reply_markup = reply_markup, quote= True)
